@@ -1,0 +1,25 @@
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #545864;
+  mix-blend-mode: multiply;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.cursorDot {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #545864;
+  mix-blend-mode: multiply;
+  z-index: 999;
+  pointer-events: none;
+}

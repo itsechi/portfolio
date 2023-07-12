@@ -1,8 +1,14 @@
 import "./App.css";
 import { Nav } from "./components/Nav/Nav";
+import { Cursor } from "./components/Cursor/Cursor";
 
 function App() {
-  return <Nav />;
+  return (
+    <>
+      <Cursor />
+      <Nav />
+    </>
+  );
 }
 
 export default App;
