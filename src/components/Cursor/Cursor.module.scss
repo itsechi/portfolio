@@ -5,8 +5,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 2px solid #545864;
-  mix-blend-mode: multiply;
+  border: 2px solid white;
   z-index: 999;
   pointer-events: none;
 }
@@ -18,8 +17,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #545864;
-  mix-blend-mode: multiply;
+  background-color: white;
   z-index: 999;
   pointer-events: none;
 }

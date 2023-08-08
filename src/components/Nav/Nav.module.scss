@@ -1,11 +1,18 @@
 .navLinks {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 1rem;
   font-size: 1.2rem;
+  height: 46px;
+  letter-spacing: -1.523px;
+  padding: 1rem;
 }
 
 .navNumber {
   font-size: 0.6rem;
   padding-right: 0.25rem;
+  user-select: none;
+  letter-spacing: 0px;
+  font-weight: 400;
 }

@@ -1,0 +1,72 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 46px);
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+h1 {
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 2rem;
+}
+
+p {
+  margin-top: 0.5rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+svg {
+  height: 24px;
+  width: 40px;
+  opacity: 1;
+  transition: 250ms all ease;
+  cursor: pointer;
+  fill: white;
+  transform: translateY(50%);
+  margin-left: 0.5rem;
+  overflow: visible;
+
+  path {
+    transition: 250ms all ease;
+    height: 100%;
+  }
+}
+
+a {
+  &:hover svg path {
+    d: path("M60.2691 13.3109L65.707 7.87309C65.8873 7.69281 65.9885 7.44831 65.9885 7.19336C65.9885 6.93841 65.8873 6.6939 65.707 6.51363L60.2691 1.07579C60.1348 0.940932 59.9634 0.849012 59.7767 0.81168C59.59 0.774349 59.3965 0.793287 59.2206 0.866094C59.0447 0.938901 58.8943 1.0623 58.7887 1.22064C58.683 1.37898 58.6267 1.56514 58.6269 1.75552L58.6283 6.23222L0.499999 6.23086V8.15586L58.6283 8.1545L58.6269 12.6312C58.6267 12.8216 58.683 13.0077 58.7887 13.1661C58.8943 13.3244 59.0447 13.4478 59.2206 13.5206C59.3965 13.5934 59.59 13.6124 59.7767 13.575C59.9634 13.5377 60.1348 13.4458 60.2691 13.3109Z")
+  }
+}
+
+.blobContainer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+// .noise {
+//   position: fixed;
+//   z-index: 9999;
+//   top: -300%;
+//   left: -150%;
+//   height: 600%;
+//   width: 600%;
+//   background-image: url('../../assets/noise.png');
+//   background-size: 200px;
+//   background-repeat: repeat;
+//   opacity: 0.3;
+// }
