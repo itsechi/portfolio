@@ -14,6 +14,8 @@ export const Cursor = () => {
   const springDotConfig = { damping: 40, stiffness: 1000 };
   const cursorDotXSpring = useSpring(cursorX, springDotConfig);
   const cursorDotYSpring = useSpring(cursorY, springDotConfig);
+  const scale = useMotionValue(1);
+  const scaleSpring = useSpring(scale, springDotConfig);
 
   React.useEffect(() => {
     const moveCursor = (e) => {
@@ -23,10 +25,24 @@ export const Cursor = () => {
       cursorDotY.set(e.clientY - 12);
     };
 
+    const scaleCursorUp = (e) => {
+      scale.set(2);
+    }
+
+    const scaleCursorDown = (e) => {
+      scale.set(1);
+    }
+
     window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("mousedown", scaleCursorUp);
+    window.addEventListener("mouseup", scaleCursorDown);
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
+      window.removeEventListener("mousedown", scaleCursorUp);
+      window.removeEventListener("mouseup", scaleCursorDown);
+
+
     };
   }, []);
 
@@ -37,6 +53,7 @@ export const Cursor = () => {
         style={{
           translateX: cursorXSpring,
           translateY: cursorYSpring,
+          scale: scaleSpring,
         }}
       />
 
