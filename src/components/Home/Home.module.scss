@@ -56,8 +56,9 @@ a {
   left: 0;
   top: 0;
   overflow: hidden;
-  z-index: -1;
-  background-color: #030202;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
 }
 
 // .noise {
