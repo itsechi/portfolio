@@ -1,7 +1,21 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.navHalf {
+  justify-content: space-between;
+  width: 50vw;
+}
+
 .navLinks {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   font-size: 1.2rem;
   height: 46px;
@@ -17,3 +31,4 @@
   letter-spacing: 0px;
   font-weight: 400;
 }
+

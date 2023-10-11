@@ -1,16 +1,9 @@
 import styles from "./Home.module.scss";
-import { Blob } from "../Blob/Blob";
 
 export const Home = () => {
 
   return (
     <main>
-      <div className={styles.blobContainer}>
-        <Blob color={'blue'} />
-        <Blob color={'yellow'} />
-        <Blob color={'pink'} /> 
-      </div>
-
       <div className={styles.noise}></div>
       <div className={styles.header}>
         <h1>
