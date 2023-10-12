@@ -93,3 +93,17 @@ canvas {
   background-color: black;
   z-index: 1000;
 }
+
+.noise {
+  position: fixed;
+  z-index: 9999;
+  top: -300%;
+  left: -150%;
+  height: 600%;
+  width: 600%;
+  background-image: url('./assets/noise.png');
+  background-size: 200px;
+  background-repeat: repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}

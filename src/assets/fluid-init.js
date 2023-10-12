@@ -1136,13 +1136,13 @@ canvas.addEventListener("mousedown", function (e) {
   updatePointerDownData(pointer, -1, posX, posY);
 });
 
-canvas.addEventListener("mousemove", function (e) {
+window.addEventListener("mousemove", function (e) {
   let pointer = pointers[0];
   if (pointer.down) {
     return;
   }
-  let posX = scaleByPixelRatio(e.offsetX);
-  let posY = scaleByPixelRatio(e.offsetY);
+  let posX = scaleByPixelRatio(e.clientX);
+  let posY = scaleByPixelRatio(e.clientY);
   updatePointerMoveData(pointer, posX, posY);
 });
 
@@ -1200,8 +1200,8 @@ function updatePointerDownData(pointer, id, posX, posY) {
   pointer.id = id;
   pointer.down = true;
   pointer.moved = false;
-  pointer.texcoordX = posX / canvas.width;
-  pointer.texcoordY = 1.0 - posY / canvas.height;
+  pointer.texcoordX = posX / (canvas.width / 2);
+  pointer.texcoordY = 1 - posY / (canvas.height / 2);
   pointer.prevTexcoordX = pointer.texcoordX;
   pointer.prevTexcoordY = pointer.texcoordY;
   pointer.deltaX = 0;

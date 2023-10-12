@@ -22,6 +22,7 @@ export const App = () => {
   return (
     <>
       {!loaded && <div className="loading"></div>}
+      <div className="noise"></div> {/* testing */}
       <Nav active={active} updateState={updateState} />
       <Fluid />
       {active === "home" && <Home />}
