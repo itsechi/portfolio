@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 export const Fluid = () => {
   React.useEffect(() => {
-    const script = document.createElement("script");
+    const script = document.createElement('script');
 
-    script.src = "/src/assets/fluid-init.js";
+    script.src = '/src/assets/fluid-init.js';
     script.async = true;
-    script.type = "module";
+    script.type = 'module';
 
     document.body.appendChild(script);
 

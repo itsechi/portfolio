@@ -1,21 +1,20 @@
-import styles from "./Home.module.scss";
+import styles from './Home.module.scss';
 
 export const Home = () => {
-
   return (
     <main>
       <div className={styles.noise}></div>
       <div className={styles.header}>
         <h1>
-          hello, I&rsquo;m{" "}
+          hello, I&rsquo;m{' '}
           <span className={styles.bold}>Oliwia Wardulińska</span>
         </h1>
         <h1>
-          a <span className={styles.bold}>front-end developer</span> &{" "}
+          a <span className={styles.bold}>front-end developer</span> &{' '}
           <span className={styles.bold}>designer</span>
         </h1>
         <p>
-          you can check out my github{" "}
+          you can check out my github{' '}
           <a className={styles.bold} href="#">
             here
             <svg>

@@ -1,4 +1,4 @@
-import styles from "./Nav.module.scss";
+import styles from './Nav.module.scss';
 
 export const Nav = (props) => {
   const { updateState } = props;
@@ -16,15 +16,15 @@ export const Nav = (props) => {
     <nav
       className={[
         styles.nav,
-        props.active !== "home" ? styles.navHalf : "",
-      ].join(" ")}
+        props.active !== 'home' ? styles.navHalf : '',
+      ].join(' ')}
     >
-      {props.active !== "home" && <h3>{props.active}</h3>}{" "}
+      {props.active !== 'home' && <h3>{props.active}</h3>}{' '}
       <div>
         <ul className={styles.navLinks}>
-          <NavLink number={"01"} title={"home"} />
-          <NavLink number={"02"} title={"projects"} />
-          <NavLink number={"03"} title={"about me & contact"} />
+          <NavLink number={'01'} title={'home'} />
+          <NavLink number={'02'} title={'projects'} />
+          <NavLink number={'03'} title={'about me & contact'} />
         </ul>
       </div>
     </nav>
