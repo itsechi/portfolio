@@ -1124,30 +1124,23 @@ function correctRadius(radius) {
   return radius;
 }
 
-canvas.addEventListener('mousedown', function (e) {
+canvas.addEventListener('mouseover', function (e) {
   let posX = scaleByPixelRatio(e.offsetX);
   let posY = scaleByPixelRatio(e.offsetY);
-  let pointer = pointers.find(function (p) {
-    return p.id == -1;
-  });
-  if (pointer == null) {
-    pointer = new pointerPrototype();
+  let pointer = pointers.find((p) => p.id == -1);
+  if (pointer == null) pointer = new pointerPrototype();
+  /* this makes the cursor work with text above canvas and triggers the effect only on the initial mouseover */
+  if (pointer.texcoordX === 0 && pointer.texcoordY === 0) {
+    updatePointerDownData(pointer, -1, posX, posY);
   }
-  updatePointerDownData(pointer, -1, posX, posY);
 });
 
 window.addEventListener('mousemove', function (e) {
   let pointer = pointers[0];
-  if (pointer.down) {
-    return;
-  }
+  if (!pointer.down) return;
   let posX = scaleByPixelRatio(e.clientX);
   let posY = scaleByPixelRatio(e.clientY);
   updatePointerMoveData(pointer, posX, posY);
-});
-
-window.addEventListener('mouseup', function () {
-  updatePointerUpData(pointers[0]);
 });
 
 canvas.addEventListener('touchstart', function (e) {
