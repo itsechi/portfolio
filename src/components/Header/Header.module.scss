@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  height: 90px;
 }
 
 .header_logo {
@@ -13,7 +14,6 @@
   font-size: 1.25rem;
   font-weight: 700;
   transform: translateY(-2%);
-  // letter-spacing: -0.96px;
   cursor: pointer;
 }
 
@@ -21,7 +21,6 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  color: #FFF;
   font-size: 1rem;
   line-height: normal;
   text-transform: uppercase;

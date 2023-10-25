@@ -1,0 +1,55 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 90px);
+}
+
+.intro_header {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: right;
+  z-index: 1;
+  position: relative;
+}
+
+.intro_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  letter-spacing: -3.2px;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 4.5rem;
+}
+
+.intro_left {
+  text-align: left;
+  line-height: 2rem;
+}
+
+.intro_info {
+  margin-top: 8rem;
+  max-width: 300px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.intro_info::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background-color: white;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -300%);
+}
+
+.intro_bold {
+  font-weight: 700;
+}
