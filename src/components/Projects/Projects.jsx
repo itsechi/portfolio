@@ -2,7 +2,6 @@ import styles from './Projects.module.scss';
 
 export const Projects = () => {
   return (
-    <main>
       <div>
         <div>
           <p>React</p>
@@ -16,6 +15,5 @@ export const Projects = () => {
         </p>
         <a href="#">View website</a>
       </div>
-    </main>
   );
 };
