@@ -1,6 +1,6 @@
 import styles from './Intro.module.scss';
 
-export const Home = () => {
+export const Intro = () => {
   return (
     <div className={styles.intro}>
       <div className={styles.intro_header}>
