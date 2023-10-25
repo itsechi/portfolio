@@ -2,7 +2,7 @@ import styles from './Intro.module.scss';
 
 export const Intro = () => {
   return (
-    <div className={styles.intro}>
+    <section className={styles.intro}>
       <div className={styles.intro_header}>
         <h2 className={styles.intro_left}>hello, I&rsquo;m </h2>
         <h1 className={styles.intro_title}>Oliwia Wardulińska</h1>
@@ -21,6 +21,6 @@ export const Intro = () => {
         </a>{' '}
         or scroll down to see my projects.
       </p>
-    </div>
+    </section>
   );
 };
