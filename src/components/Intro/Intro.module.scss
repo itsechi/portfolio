@@ -33,21 +33,10 @@
 
 .intro_info {
   margin-top: 8rem;
-  max-width: 300px;
+  max-width: 700px;
   text-align: center;
   text-transform: uppercase;
   position: relative;
-}
-
-.intro_info::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 5px;
-  background-color: white;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -300%);
 }
 
 .intro_bold {

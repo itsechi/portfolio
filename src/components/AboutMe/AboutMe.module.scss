@@ -1,0 +1,46 @@
+.aboutMe {
+  z-index: 2;
+  padding: 10rem;
+}
+
+.aboutMe_header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.aboutMe_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  letter-spacing: -3.2px;
+  text-transform: capitalize;
+  line-height: 4.5rem;
+}
+
+.aboutMe_left {
+  line-height: 1.5rem;
+}
+
+.aboutMe_text {
+  margin-top: 3rem;
+  max-width: 600px;
+}
+
+.aboutMe_skills {
+  margin-top: 3rem;
+}
+
+.aboutMe_skillsTitle {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 0.7rem;
+  font-weight: 700;
+}
+
+.aboutMe_skillsText {
+  font-style: italic;
+  font-family: 'PlayfairDisplay', serif;
+}
