@@ -80,7 +80,7 @@ export const Projects = () => {
           img={wheresWaldo}
         />
         <div className={[styles.project, styles.project_uneven].join(' ')}>
-          <h3 className={styles.projects_largeText}>Want to see more?</h3>
+          <h3 className={styles.project_largeText}>Want to see more?</h3>
           <p>
             If you&rsquo;d like to see more design-oriented projects, you can
             view my{' '}

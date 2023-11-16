@@ -44,7 +44,7 @@ let config = {
   COLOR_UPDATE_SPEED: 10,
   PAUSED: false,
   BACK_COLOR: { r: 0, g: 0, b: 0 },
-  TRANSPARENT: false,
+  TRANSPARENT: true,
   BLOOM: false,
   BLOOM_ITERATIONS: 8,
   BLOOM_RESOLUTION: 256,
@@ -942,7 +942,7 @@ function render(target) {
     drawColor(fbo, normalizeColor(config.BACK_COLOR));
   }
   if (target == null && config.TRANSPARENT) {
-    drawCheckerboard(fbo);
+    // drawCheckerboard(fbo);
   }
   drawDisplay(fbo, width, height);
 }

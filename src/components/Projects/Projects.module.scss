@@ -1,5 +1,4 @@
 .projects {
-  z-index: 2;
   padding: 10rem;
 }
 
@@ -10,12 +9,19 @@
   text-transform: capitalize;
   line-height: 4.5rem;
   margin-bottom: 3rem;
+  z-index: 1;
+  position: relative;
 }
 
 .projects_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
+}
+
+.project {
+  z-index: 1;
+  position: relative;
 }
 
 .project_uneven {
@@ -73,7 +79,7 @@
   }
 }
 
-.projects_largeText {
+.project_largeText {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   letter-spacing: -1.6px;

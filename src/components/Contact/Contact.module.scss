@@ -1,5 +1,4 @@
 .contact {
-  z-index: 2;
   padding: 10rem;
   align-self: flex-end;
 }
@@ -11,6 +10,8 @@
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
+  z-index: 1;
+  position: relative;
 }
 
 .contact_title {
@@ -29,6 +30,8 @@
   margin-top: 3rem;
   text-align: right;
   margin-left: auto;
+  z-index: 1;
+  position: relative;
 }
 
 .contact_websites {
