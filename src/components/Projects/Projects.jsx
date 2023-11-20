@@ -5,9 +5,34 @@ import twitter from '../../assets/twitter.png';
 import todoList from '../../assets/todoList.png';
 import wheresWaldo from '../../assets/wheresWaldo.png';
 import { Link } from '../Link/Link';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
+import { useParallax } from '../../assets/useParallax';
 
 export const Projects = () => {
+  const scrollRef = React.useRef(null);
+
+  const { scrollYProgress: projectsScrollProgress } = useScroll({
+    target: scrollRef,
+    offset: ['start end', 'end end'],
+  });
+
+  const scrollTranslateValue = useTransform(
+    projectsScrollProgress,
+    [0, 1],
+    ['200px', '-450px']
+  );
+
   const Project = (props) => {
+    const {
+      primaryX,
+      primaryY,
+      secondaryX,
+      secondaryY,
+      onMouseMoveHandler,
+      onMouseLeaveHandler,
+    } = useParallax();
+
     const projectTags = props.tags.map((tag) => (
       <p className={styles.project_tag} key={tag}>
         {tag}
@@ -15,10 +40,29 @@ export const Projects = () => {
     ));
 
     return (
-      <article className={props.classes}>
-        <img className={styles.project_image} src={props.img}></img>
-        <h3 className={styles.project_title}>{props.title}</h3>
-        <div className={styles.project_tags}>{projectTags}</div>
+      <motion.article className={props.classes}>
+        <motion.img
+          onMouseMove={onMouseMoveHandler}
+          onMouseLeave={onMouseLeaveHandler}
+          whileHover={{
+            scale: 1.05,
+          }}
+          style={{
+            x: primaryX,
+            y: primaryY,
+          }}
+          className={styles.project_image}
+          src={props.img}
+        ></motion.img>
+        <motion.div
+          style={{
+            x: secondaryX,
+            y: secondaryY,
+          }}
+        >
+          <h3 className={styles.project_title}>{props.title}</h3>
+          <div className={styles.project_tags}>{projectTags}</div>
+        </motion.div>
         <p className={styles.project_description}>{props.description}</p>
         <a
           className={styles.project_website}
@@ -31,14 +75,15 @@ export const Projects = () => {
           </svg>
           View project{' '}
         </a>
-      </article>
+      </motion.article>
     );
   };
 
   return (
     <section className={styles.projects}>
-      <h2 className={styles.projects_header}>Projects</h2>
-      <div className={styles.projects_grid}>
+      <div className={styles.projects_headerRef}></div>
+      <motion.h2 className={styles.projects_header}>Projects</motion.h2>
+      <div className={styles.projects_grid} ref={scrollRef}>
         <Project
           classes={styles.project}
           tags={['React', 'Firebase', 'Vite', 'SCSS', 'CSS modules']}
@@ -47,14 +92,18 @@ export const Projects = () => {
           website={'https://itsechi.github.io/twitter-clone/'}
           img={twitter}
         />
-        <Project
-          classes={[styles.project, styles.project_uneven].join(' ')}
-          tags={['React', 'Firebase', 'SCSS', 'Jest', 'CSS modules']}
-          title={'Shopping Cart'}
-          description={`A simple fake store React application made to practice routing, Jest testing and using CSS modules. It allows users to log in through Google, browse the store catalog, add items to cart and store that information in the Firebase database. I wanted the design to be simple yet effective.`}
-          website={'https://itsechi.github.io/shopping-cart/'}
-          img={shoppingCart}
-        />
+        <motion.div
+          className={[styles.project, styles.project_uneven].join(' ')}
+          style={{ translateY: scrollTranslateValue }}
+        >
+          <Project
+            tags={['React', 'Firebase', 'SCSS', 'Jest', 'CSS modules']}
+            title={'Shopping Cart'}
+            description={`A simple fake store React application made to practice routing, Jest testing and using CSS modules. It allows users to log in through Google, browse the store catalog, add items to cart and store that information in the Firebase database. I wanted the design to be simple yet effective.`}
+            website={'https://itsechi.github.io/shopping-cart/'}
+            img={shoppingCart}
+          />
+        </motion.div>
         <Project
           classes={styles.project}
           tags={['JavaScript', 'Webpack', 'SCSS']}
@@ -63,23 +112,20 @@ export const Projects = () => {
           website={'https://itsechi.github.io/weather/'}
           img={weather}
         />
-        <Project
-          classes={[styles.project, styles.project_uneven].join(' ')}
-          tags={['JavaScript', 'Webpack', 'SCSS']}
-          title={'Todo List'}
-          description={`A simple task organizer made with pure JavaScript. The user can add projects, add and edit tasks, sort the tasks by due date, name and date of creation, delete taks and projects, set priority of the tasks and monitor their progress with a progress bar for each project.`}
-          website={'https://itsechi.github.io/todo-list/'}
-          img={todoList}
-        />
-        <Project
-          classes={styles.project}
-          tags={['React', 'Firebase', 'Vite', 'CSS']}
-          title={`Where's waldo?`}
-          description={`A Stardew Valley themed Where's Waldo type of game made with React and Firebase. The user must find three hidden characters in the shortest time possible. They can then submit their score and name to the leaderboard which is stored in the Firebase. I wanted to recreate the pixel art vibe of the game while keeping things plain and simple.`}
-          website={'https://itsechi.github.io/wheres-waldo/'}
-          img={wheresWaldo}
-        />
-        <div className={[styles.project, styles.project_uneven].join(' ')}>
+        <motion.div
+          className={[styles.project, styles.project_uneven].join(' ')}
+          style={{ translateY: scrollTranslateValue }}
+        >
+          <Project
+            tags={['JavaScript', 'Webpack', 'SCSS']}
+            title={'Todo List'}
+            description={`A simple task organizer made with pure JavaScript. The user can add projects, add and edit tasks, sort the tasks by due date, name and date of creation, delete taks and projects, set priority of the tasks and monitor their progress with a progress bar for each project.`}
+            website={'https://itsechi.github.io/todo-list/'}
+            img={todoList}
+          />
+        </motion.div>
+
+        <div className={styles.project}>
           <h3 className={styles.project_largeText}>Want to see more?</h3>
           <p>
             If you&rsquo;d like to see more design-oriented projects, you can
@@ -121,6 +167,19 @@ export const Projects = () => {
             apps.
           </p>
         </div>
+
+        <motion.div
+          className={[styles.project, styles.project_uneven].join(' ')}
+          style={{ translateY: scrollTranslateValue }}
+        >
+          <Project
+            tags={['React', 'Firebase', 'Vite', 'CSS']}
+            title={`Where's waldo?`}
+            description={`A Stardew Valley themed Where's Waldo type of game made with React and Firebase. The user must find three hidden characters in the shortest time possible. They can then submit their score and name to the leaderboard which is stored in the Firebase. I wanted to recreate the pixel art vibe of the game while keeping things plain and simple.`}
+            website={'https://itsechi.github.io/wheres-waldo/'}
+            img={wheresWaldo}
+          />
+        </motion.div>
       </div>
     </section>
   );
