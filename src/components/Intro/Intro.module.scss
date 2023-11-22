@@ -15,6 +15,7 @@
   text-align: right;
   z-index: 1;
   position: relative;
+  pointer-events: all;
 }
 
 .intro_title {
@@ -38,4 +39,5 @@
   text-transform: uppercase;
   position: relative;
   z-index: 1;
+  pointer-events: all;
 }

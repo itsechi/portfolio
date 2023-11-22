@@ -11,6 +11,7 @@
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
+  pointer-events: all;
 }
 
 .aboutMe_title {
@@ -30,4 +31,5 @@
   max-width: 600px;
   z-index: 1;
   position: relative;
+  pointer-events: all;
 }

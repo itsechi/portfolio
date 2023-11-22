@@ -5,7 +5,7 @@ import twitter from '../../assets/twitter.png';
 import todoList from '../../assets/todoList.png';
 import wheresWaldo from '../../assets/wheresWaldo.png';
 import { Link } from '../Link/Link';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import React from 'react';
 import { useParallax } from '../../assets/useParallax';
 
@@ -14,11 +14,16 @@ export const Projects = () => {
 
   const { scrollYProgress: projectsScrollProgress } = useScroll({
     target: scrollRef,
-    offset: ['start end', 'end end'],
+    offset: ['-0.5', '1'],
   });
 
-  const scrollTranslateValue = useTransform(
-    projectsScrollProgress,
+  const projectsSpring = useSpring(projectsScrollProgress, {
+    stiffness: 100,
+    damping: 30,
+  });
+
+  let translateValue = useTransform(
+    projectsSpring,
     [0, 1],
     ['200px', '-450px']
   );
@@ -94,7 +99,7 @@ export const Projects = () => {
         />
         <motion.div
           className={[styles.project, styles.project_uneven].join(' ')}
-          style={{ translateY: scrollTranslateValue }}
+          style={{ translateY: translateValue }}
         >
           <Project
             tags={['React', 'Firebase', 'SCSS', 'Jest', 'CSS modules']}
@@ -114,7 +119,7 @@ export const Projects = () => {
         />
         <motion.div
           className={[styles.project, styles.project_uneven].join(' ')}
-          style={{ translateY: scrollTranslateValue }}
+          style={{ translateY: translateValue }}
         >
           <Project
             tags={['JavaScript', 'Webpack', 'SCSS']}
@@ -170,7 +175,7 @@ export const Projects = () => {
 
         <motion.div
           className={[styles.project, styles.project_uneven].join(' ')}
-          style={{ translateY: scrollTranslateValue }}
+          style={{ translateY: translateValue }}
         >
           <Project
             tags={['React', 'Firebase', 'Vite', 'CSS']}

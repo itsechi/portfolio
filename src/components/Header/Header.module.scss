@@ -16,6 +16,7 @@
   cursor: pointer;
   z-index: 1;
   position: relative;
+  pointer-events: all;
 }
 
 .nav_links {
@@ -28,6 +29,7 @@
   font-weight: 400;
   z-index: 1;
   position: relative;
+  pointer-events: all;
 }
 
 .nav_link {

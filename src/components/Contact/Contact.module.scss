@@ -12,6 +12,7 @@
   text-transform: uppercase;
   z-index: 1;
   position: relative;
+  pointer-events: all;
 }
 
 .contact_title {
@@ -32,6 +33,7 @@
   margin-left: auto;
   z-index: 1;
   position: relative;
+  pointer-events: all;
 }
 
 .contact_websites {

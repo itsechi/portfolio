@@ -13,6 +13,7 @@
   margin-bottom: 3rem;
   z-index: 1;
   position: relative;
+  pointer-events: all;
 }
 
 .projects_grid {
@@ -24,6 +25,7 @@
 .project {
   z-index: 1;
   position: relative;
+  pointer-events: all;
 }
 
 .project_uneven {
