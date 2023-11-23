@@ -21,7 +21,7 @@ export const App = () => {
       <Fluid />
       <SmoothScroll>
         <Header />
-        <Main />
+        <Main loaded={loaded} />
       </SmoothScroll>
     </>
   );

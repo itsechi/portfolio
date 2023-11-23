@@ -4,10 +4,10 @@ import { Intro } from '../Intro/Intro';
 import { Projects } from '../Projects/Projects';
 import styles from './Main.module.scss';
 
-export const Main = () => {
+export const Main = (props) => {
   return (
     <main className={styles.main}>
-      <Intro />
+      <Intro loaded={props.loaded} />
       <Projects />
       <div className={styles.main_aboutAndContact}>
         <AboutMe />
