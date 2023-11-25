@@ -14,57 +14,25 @@ import {
 } from 'framer-motion';
 import React from 'react';
 import { Project } from './Project';
+import { variants } from '../../assets/variants';
 
 export const Projects = () => {
-  const scrollRef = React.useRef(null);
-
+  const ref = React.useRef();
+  const scrollRef = React.useRef();
+  const isInView = useInView(ref, { once: true });
   const { scrollYProgress: projectsScrollProgress } = useScroll({
     target: scrollRef,
     offset: ['-0.5', '1'],
   });
-
-  const projectsSpring = useSpring(projectsScrollProgress, {
-    stiffness: 100,
-    damping: 30,
-  });
-
+  const projectsSpring = useSpring(
+    projectsScrollProgress,
+    variants.springPhysics
+  );
   let translateValue = useTransform(
     projectsSpring,
     [0, 1],
     ['200px', '-450px']
   );
-
-  const ref = React.useRef();
-  const isInView = useInView(ref, { once: true });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.5 * i,
-        ease: [0.2, 0.65, 0.3, 0.9],
-      },
-    }),
-  };
-
-  const textVariants = {
-    hidden: {
-      opacity: 0,
-      y: `50px`,
-      rotate: 4,
-    },
-    visible: {
-      opacity: 1,
-      y: `0px`,
-      rotate: 0,
-      transition: {
-        duration: 0.7,
-        ease: [0.2, 0.65, 0.3, 0.9],
-      },
-    },
-  };
 
   return (
     <section className={styles.projects}>
@@ -114,17 +82,17 @@ export const Projects = () => {
 
         <motion.div
           className={styles.project}
-          variants={containerVariants}
+          variants={variants.containerVariants}
           animate={isInView ? 'visible' : 'hidden'}
           ref={ref}
         >
           <motion.h3
-            variants={textVariants}
+            variants={variants.textVariants}
             className={styles.project_largeText}
           >
             Want to see more?
           </motion.h3>
-          <motion.p variants={textVariants}>
+          <motion.p variants={variants.textVariants}>
             If you&rsquo;d like to see more design-oriented projects, you can
             view my{' '}
             <Link
@@ -144,7 +112,7 @@ export const Projects = () => {
             .
           </motion.p>
 
-          <motion.p variants={textVariants}>
+          <motion.p variants={variants.textVariants}>
             If you want to play some of the games I&rsquo;ve made, you can check
             out my{' '}
             <Link
