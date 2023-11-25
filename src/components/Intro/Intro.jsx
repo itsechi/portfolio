@@ -26,7 +26,7 @@ export const Intro = (props) => {
   let leftValue = useTransform(headerSpring, [0, 1], ['0px', '-100px']);
   let rightValue = useTransform(headerSpring, [0, 1], ['0px', '100px']);
 
-  const headerAnimation = {
+  const headerVariants = {
     hidden: {
       opacity: 0,
       y: `50px`,
@@ -43,7 +43,7 @@ export const Intro = (props) => {
     },
   };
 
-  const infoAnimation = {
+  const infoVariants = {
     hidden: {
       opacity: 0,
       y: `50px`,
@@ -61,7 +61,7 @@ export const Intro = (props) => {
     },
   };
 
-  const containerAnimation = {
+  const containerVariants = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
@@ -83,23 +83,23 @@ export const Intro = (props) => {
     <section className={styles.intro} ref={scrollRef}>
       <motion.div
         className={styles.intro_header}
-        variants={containerAnimation}
+        variants={containerVariants}
         initial="hidden"
         animate={controls}
       >
         <motion.h2
           style={{ translateX: leftValue }}
           className={styles.intro_left}
-          variants={headerAnimation}
+          variants={headerVariants}
         >
           hello, I&rsquo;m{' '}
         </motion.h2>
-        <motion.h1 className={styles.intro_title} variants={headerAnimation}>
+        <motion.h1 className={styles.intro_title} variants={headerVariants}>
           Oliwia Wardulińska
         </motion.h1>
         <motion.h2
           style={{ translateX: rightValue }}
-          variants={headerAnimation}
+          variants={headerVariants}
         >
           a front-end developer & designer
         </motion.h2>
@@ -108,7 +108,7 @@ export const Intro = (props) => {
         className={styles.intro_info}
         initial="hidden"
         animate={controls}
-        variants={infoAnimation}
+        variants={infoVariants}
       >
         I&rsquo;m a passionate front-end web developer and graphic designer from
         poland. you can check out my github{' '}

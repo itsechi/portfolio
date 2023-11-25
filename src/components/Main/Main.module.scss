@@ -4,7 +4,8 @@
 }
 
 .main_aboutAndContact {
+  min-height: 100vh;
   display: flex;
-  height: 100vh;
   justify-content: space-between;
+  align-items: flex-end;
 }

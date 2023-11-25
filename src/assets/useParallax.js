@@ -1,7 +1,7 @@
 import { useSpring, useTransform } from "framer-motion";
 
 
-export const useParallax = (stiffness = 100, damping = 20, force = 100) => {
+export const useParallax = (stiffness = 500, damping = 20, force = 100) => {
   const x = useSpring(0, { stiffness, damping });
   const y = useSpring(0, { stiffness, damping });
   const primaryX = useTransform(x, (event) => event / force);
