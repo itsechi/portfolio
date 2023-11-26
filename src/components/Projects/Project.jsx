@@ -68,8 +68,9 @@ export const Project = (props) => {
         target="_blank"
         rel="noopener noreferrer"
         variants={variants.textVariants}
+        aria-label={`Check out the ${props.title} site`}
       >
-        <svg>
+        <svg aria-hidden="true">
           <use href={`${icons}#link`}></use>
         </svg>
         View project{' '}

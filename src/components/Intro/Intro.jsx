@@ -67,6 +67,7 @@ export const Intro = (props) => {
         <Link
           href="https://github.com/itsechi?tab=repositories"
           name={'here'}
+          label={'View my github profile'}
         />{' '}
         or scroll down to see my projects.
       </motion.p>

@@ -14,6 +14,7 @@ export const Link = (props) => {
       href={props.href}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={props.label}
     >
       {props.name}
     </a>

@@ -101,16 +101,19 @@ export const Projects = () => {
             <Link
               href="https://itsechi.github.io/restaurant/"
               name={'Pure Cove Restaurant site'}
+              label={'Check out the Pure Cove Restaurant site'}
             />
             ,{' '}
             <Link
               href="https://itsechi.github.io/admin-dashboard/"
               name={'Admin Dashboard'}
+              label={'Check out the Admin Dashboard site'}
             />{' '}
             or{' '}
             <Link
               href="https://itsechi.github.io/cv-project/"
               name={'the CV Creator'}
+              label={'Check out the CV Creator site'}
             />
             .
           </motion.p>
@@ -120,16 +123,19 @@ export const Projects = () => {
             <Link
               href="https://itsechi.github.io/memory-card/"
               name={'Memory Card'}
+              label={'Check out the Memory Card game'}
             />
             ,{' '}
             <Link
               href="https://itsechi.github.io/battleship/"
               name={'Battleship'}
+              label={'Check out Battleship game'}
             />{' '}
             or{' '}
             <Link
               href="https://itsechi.github.io/tic-tac-toe/"
               name={'Tic-Tac-Toe'}
+              label={'Check out the Tic-Tac-Toe game'}
             />{' '}
             apps.
           </motion.p>
