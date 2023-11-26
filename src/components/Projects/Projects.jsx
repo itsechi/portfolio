@@ -1,10 +1,7 @@
-import styles from './Projects.module.scss';
-import weather from '../../assets/weather.png';
-import shoppingCart from '../../assets/shoppingcart.png';
-import twitter from '../../assets/twitter.png';
-import todoList from '../../assets/todoList.png';
-import wheresWaldo from '../../assets/wheresWaldo.png';
+import { images } from '../../assets/js/images';
 import { Link } from '../Link/Link';
+import { Project } from './Project';
+import { variants } from '../../assets/js/variants';
 import {
   motion,
   useScroll,
@@ -12,9 +9,8 @@ import {
   useSpring,
   useInView,
 } from 'framer-motion';
+import styles from './Projects.module.scss';
 import React from 'react';
-import { Project } from './Project';
-import { variants } from '../../assets/variants';
 
 export const Projects = () => {
   const ref = React.useRef();
@@ -45,8 +41,9 @@ export const Projects = () => {
           title={'Twitter Clone'}
           description={`A Twitter clone built with React and Firebase. The users can edit their profile, follow and unfollow accounts, write and like tweets and visit other profiles. I made it possible for users to log in through Google or use the site as a guest to test the functionality.`}
           website={'https://itsechi.github.io/twitter-clone/'}
-          img={twitter}
+          img={images.twitter}
         />
+
         <motion.div
           className={[styles.project, styles.project_uneven].join(' ')}
           style={{ translateY: translateValue }}
@@ -56,17 +53,19 @@ export const Projects = () => {
             title={'Shopping Cart'}
             description={`A simple fake store React application made to practice routing, Jest testing and using CSS modules. It allows users to log in through Google, browse the store catalog, add items to cart and store that information in the Firebase database. I wanted the design to be simple yet effective.`}
             website={'https://itsechi.github.io/shopping-cart/'}
-            img={shoppingCart}
+            img={images.shoppingCart}
           />
         </motion.div>
+
         <Project
           classes={styles.project}
           tags={['JavaScript', 'Webpack', 'SCSS']}
           title={'Weather App'}
           description={`Weather app that displays current forecast data for a given location. It was a part of the The Odin Project curriculum and I made it with a model-view-controller design pattern. I created the design in Figma using grids for the first time and I focused on making the design user-friendly and minimalistic.`}
           website={'https://itsechi.github.io/weather/'}
-          img={weather}
+          img={images.weather}
         />
+
         <motion.div
           className={[styles.project, styles.project_uneven].join(' ')}
           style={{ translateY: translateValue }}
@@ -76,7 +75,7 @@ export const Projects = () => {
             title={'Todo List'}
             description={`A simple task organizer made with pure JavaScript. The user can add projects, add and edit tasks, sort the tasks by due date, name and date of creation, delete taks and projects, set priority of the tasks and monitor their progress with a progress bar for each project.`}
             website={'https://itsechi.github.io/todo-list/'}
-            img={todoList}
+            img={images.todoList}
           />
         </motion.div>
 
@@ -111,7 +110,6 @@ export const Projects = () => {
             />
             .
           </motion.p>
-
           <motion.p variants={variants.textVariants}>
             If you want to play some of the games I&rsquo;ve made, you can check
             out my{' '}
@@ -142,7 +140,7 @@ export const Projects = () => {
             title={`Where's waldo?`}
             description={`A Stardew Valley themed Where's Waldo type of game made with React and Firebase. The user must find three hidden characters in the shortest time possible. They can then submit their score and name to the leaderboard which is stored in the Firebase. I wanted to recreate the pixel art vibe of the game while keeping things plain and simple.`}
             website={'https://itsechi.github.io/wheres-waldo/'}
-            img={wheresWaldo}
+            img={images.wheresWaldo}
           />
         </motion.div>
       </div>

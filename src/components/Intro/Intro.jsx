@@ -1,5 +1,7 @@
+import { variants } from '../../assets/js/variants';
 import { Link } from '../Link/Link';
 import styles from './Intro.module.scss';
+import React from 'react';
 import {
   motion,
   useScroll,
@@ -7,17 +9,15 @@ import {
   useSpring,
   useAnimation,
 } from 'framer-motion';
-import React from 'react';
-import { variants } from '../../assets/variants';
 
 export const Intro = (props) => {
-  const scrollRef = React.useRef(null);
+  const scrollRef = React.useRef();
   const controls = useAnimation();
-  const { scrollYProgress: headerScrollProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: scrollRef,
     offset: ['0.16', '1'],
   });
-  const headerSpring = useSpring(headerScrollProgress, variants.springPhysics);
+  const headerSpring = useSpring(scrollYProgress, variants.springPhysics);
   let leftValue = useTransform(headerSpring, [0, 1], ['0px', '-100px']);
   let rightValue = useTransform(headerSpring, [0, 1], ['0px', '100px']);
 
@@ -40,7 +40,7 @@ export const Intro = (props) => {
           className={styles.intro_left}
           variants={variants.textVariants}
         >
-          hello, I&rsquo;m{' '}
+          hello, I&rsquo;m
         </motion.h2>
         <motion.h1
           className={styles.intro_title}
@@ -55,6 +55,7 @@ export const Intro = (props) => {
           a front-end developer & designer
         </motion.h2>
       </motion.div>
+
       <motion.p
         className={styles.intro_info}
         initial="hidden"

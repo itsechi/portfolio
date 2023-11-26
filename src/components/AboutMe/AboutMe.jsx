@@ -1,3 +1,4 @@
+import { variants } from '../../assets/js/variants';
 import styles from './AboutMe.module.scss';
 import {
   motion,
@@ -6,18 +7,17 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion';
-import { variants } from '../../assets/variants';
 import React from 'react';
 
 export const AboutMe = () => {
   const ref = React.useRef();
   const isInView = useInView(ref, { once: true });
-  const { scrollYProgress: headerScrollProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['-1', '0'],
   });
-  const headerSpring = useSpring(headerScrollProgress, variants.springPhysics);
-  let leftValue = useTransform(headerSpring, [0, 1], ['135px', '0px']);
+  const headerSpring = useSpring(scrollYProgress, variants.springPhysics);
+  let transformValue = useTransform(headerSpring, [0, 1], ['135px', '0px']);
 
   return (
     <motion.section
@@ -28,7 +28,7 @@ export const AboutMe = () => {
     >
       <div className={styles.aboutMe_header}>
         <motion.h2
-          style={{ translateX: leftValue }}
+          style={{ translateX: transformValue }}
           variants={variants.textVariants}
           className={styles.aboutMe_left}
         >

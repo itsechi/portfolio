@@ -4,29 +4,25 @@
   align-items: center;
   padding: 1rem;
   height: 90px;
-  width: 100%;
 }
 
 .header_logo {
-  padding: 1rem;
-  font-family: Playfair Display;
+  font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 700;
+  padding: 1rem;
   transform: translateY(-2%);
-  cursor: pointer;
   z-index: 1;
   position: relative;
   pointer-events: all;
+  cursor: pointer;
 }
 
 .nav_links {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  font-size: 1rem;
-  line-height: normal;
   text-transform: uppercase;
-  font-weight: 400;
   z-index: 1;
   position: relative;
   pointer-events: all;

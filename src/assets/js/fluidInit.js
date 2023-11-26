@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 'use strict';
-import textureImg from './LDR_LLL1_0.png';
+import textureImg from '../LDR_LLL1_0.png';
 
 let canvas = document.getElementsByClassName('fluid-canvas')[0];
 resizeCanvas();

@@ -1,4 +1,5 @@
 import { Link } from '../Link/Link';
+import { variants } from '../../assets/js/variants';
 import styles from './Contact.module.scss';
 import {
   motion,
@@ -8,17 +9,16 @@ import {
   useTransform,
 } from 'framer-motion';
 import React from 'react';
-import { variants } from '../../assets/variants';
 
 export const Contact = () => {
   const ref = React.useRef();
   const isInView = useInView(ref, { once: true });
-  const { scrollYProgress: headerScrollProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['-1', '-0.9'],
   });
-  const headerSpring = useSpring(headerScrollProgress, variants.springPhysics);
-  let leftValue = useTransform(headerSpring, [0, 1], ['-80px', '0px']);
+  const headerSpring = useSpring(scrollYProgress, variants.springPhysics);
+  let transformValue = useTransform(headerSpring, [0, 1], ['-80px', '0px']);
 
   return (
     <motion.section
@@ -35,9 +35,9 @@ export const Contact = () => {
           Contact me
         </motion.h1>
         <motion.h2
-          style={{ translateX: leftValue }}
+          style={{ translateX: transformValue }}
           variants={variants.textVariants}
-          className={styles.contact_left}
+          className={styles.contact_right}
         >
           Let&rsquo;s get in touch!
         </motion.h2>
