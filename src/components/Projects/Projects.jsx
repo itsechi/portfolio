@@ -32,7 +32,6 @@ export const Projects = () => {
 
   return (
     <section className={styles.projects}>
-      <div className={styles.projects_headerRef}></div>
       <motion.h2 className={styles.projects_header}>Projects</motion.h2>
       <div className={styles.projects_grid} ref={scrollRef}>
         <Project
@@ -45,19 +44,16 @@ export const Projects = () => {
           alt={'twitter clone page screenshot'}
         />
 
-        <motion.div
-          className={[styles.project, styles.project_uneven].join(' ')}
-          style={{ translateY: translateValue }}
-        >
-          <Project
-            tags={['React', 'Firebase', 'SCSS', 'Jest', 'CSS modules']}
-            title={'Shopping Cart'}
-            description={`A simple fake store React application made to practice routing, Jest testing and using CSS modules. It allows users to log in through Google, browse the store catalog, add items to cart and store that information in the Firebase database. I wanted the design to be simple yet effective.`}
-            website={'https://itsechi.github.io/shopping-cart/'}
-            img={images.shoppingCart}
-            alt={'shopping site front page'}
-          />
-        </motion.div>
+        <Project
+          classes={[styles.project, styles.project_uneven].join(' ')}
+          translateValue={translateValue}
+          tags={['React', 'Firebase', 'SCSS', 'Jest', 'CSS modules']}
+          title={'Shopping Cart'}
+          description={`A simple fake store React application made to practice routing, Jest testing and using CSS modules. It allows users to log in through Google, browse the store catalog, add items to cart and store that information in the Firebase database. I wanted the design to be simple yet effective.`}
+          website={'https://itsechi.github.io/shopping-cart/'}
+          img={images.shoppingCart}
+          alt={'shopping site front page'}
+        />
 
         <Project
           classes={styles.project}
@@ -69,19 +65,16 @@ export const Projects = () => {
           alt={'weather app ui design'}
         />
 
-        <motion.div
-          className={[styles.project, styles.project_uneven].join(' ')}
-          style={{ translateY: translateValue }}
-        >
-          <Project
-            tags={['JavaScript', 'Webpack', 'SCSS']}
-            title={'Todo List'}
-            description={`A simple task organizer made with pure JavaScript. The user can add projects, add and edit tasks, sort the tasks by due date, name and date of creation, delete taks and projects, set priority of the tasks and monitor their progress with a progress bar for each project.`}
-            website={'https://itsechi.github.io/todo-list/'}
-            img={images.todoList}
-            alt={'adding tasks at a todo list app'}
-          />
-        </motion.div>
+        <Project
+          classes={[styles.project, styles.project_uneven].join(' ')}
+          translateValue={translateValue}
+          tags={['JavaScript', 'Webpack', 'SCSS']}
+          title={'Todo List'}
+          description={`A simple task organizer made with pure JavaScript. The user can add projects, add and edit tasks, sort the tasks by due date, name and date of creation, delete taks and projects, set priority of the tasks and monitor their progress with a progress bar for each project.`}
+          website={'https://itsechi.github.io/todo-list/'}
+          img={images.todoList}
+          alt={'adding tasks at a todo list app'}
+        />
 
         <motion.div
           className={styles.project}
@@ -141,19 +134,16 @@ export const Projects = () => {
           </motion.p>
         </motion.div>
 
-        <motion.div
-          className={[styles.project, styles.project_uneven].join(' ')}
-          style={{ translateY: translateValue }}
-        >
-          <Project
-            tags={['React', 'Firebase', 'Vite', 'CSS']}
-            title={`Where's waldo?`}
-            description={`A Stardew Valley themed Where's Waldo type of game made with React and Firebase. The user must find three hidden characters in the shortest time possible. They can then submit their score and name to the leaderboard which is stored in the Firebase. I wanted to recreate the pixel art vibe of the game while keeping things plain and simple.`}
-            website={'https://itsechi.github.io/wheres-waldo/'}
-            img={images.wheresWaldo}
-            alt={'where is waldo game screenshot'}
-          />
-        </motion.div>
+        <Project
+          classes={[styles.project, styles.project_uneven].join(' ')}
+          translateValue={translateValue}
+          tags={['React', 'Firebase', 'Vite', 'CSS']}
+          title={`Where's waldo?`}
+          description={`A Stardew Valley themed Where's Waldo type of game made with React and Firebase. The user must find three hidden characters in the shortest time possible. They can then submit their score and name to the leaderboard which is stored in the Firebase. I wanted to recreate the pixel art vibe of the game while keeping things plain and simple.`}
+          website={'https://itsechi.github.io/wheres-waldo/'}
+          img={images.wheresWaldo}
+          alt={'where is waldo game screenshot'}
+        />
       </div>
     </section>
   );

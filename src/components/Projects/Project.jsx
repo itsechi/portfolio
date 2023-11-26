@@ -18,9 +18,9 @@ export const Project = (props) => {
   const isInView = useInView(ref, { once: true });
 
   const projectTags = props.tags.map((tag) => (
-    <p className={styles.project_tag} key={tag}>
+    <li className={styles.project_tag} key={tag}>
       {tag}
-    </p>
+    </li>
   ));
 
   return (
@@ -28,6 +28,7 @@ export const Project = (props) => {
       className={props.classes}
       animate={isInView ? 'visible' : 'hidden'}
       variants={variants.containerVariants}
+      style={{ translateY: props.translateValue }}
     >
       <motion.img
         onMouseMove={onMouseMoveHandler}
@@ -54,7 +55,7 @@ export const Project = (props) => {
         variants={variants.textVariants}
       >
         <h3 className={styles.project_title}>{props.title}</h3>
-        <div className={styles.project_tags}>{projectTags}</div>
+        <ul className={styles.project_tags}>{projectTags}</ul>
       </motion.div>
       <motion.p
         variants={variants.textVariants}
