@@ -42,6 +42,7 @@ export const Projects = () => {
           description={`A Twitter clone built with React and Firebase. The users can edit their profile, follow and unfollow accounts, write and like tweets and visit other profiles. I made it possible for users to log in through Google or use the site as a guest to test the functionality.`}
           website={'https://itsechi.github.io/twitter-clone/'}
           img={images.twitter}
+          alt={'twitter clone page screenshot'}
         />
 
         <motion.div
@@ -54,6 +55,7 @@ export const Projects = () => {
             description={`A simple fake store React application made to practice routing, Jest testing and using CSS modules. It allows users to log in through Google, browse the store catalog, add items to cart and store that information in the Firebase database. I wanted the design to be simple yet effective.`}
             website={'https://itsechi.github.io/shopping-cart/'}
             img={images.shoppingCart}
+            alt={'shopping site front page'}
           />
         </motion.div>
 
@@ -64,6 +66,7 @@ export const Projects = () => {
           description={`Weather app that displays current forecast data for a given location. It was a part of the The Odin Project curriculum and I made it with a model-view-controller design pattern. I created the design in Figma using grids for the first time and I focused on making the design user-friendly and minimalistic.`}
           website={'https://itsechi.github.io/weather/'}
           img={images.weather}
+          alt={'weather app ui design'}
         />
 
         <motion.div
@@ -76,6 +79,7 @@ export const Projects = () => {
             description={`A simple task organizer made with pure JavaScript. The user can add projects, add and edit tasks, sort the tasks by due date, name and date of creation, delete taks and projects, set priority of the tasks and monitor their progress with a progress bar for each project.`}
             website={'https://itsechi.github.io/todo-list/'}
             img={images.todoList}
+            alt={'adding tasks at a todo list app'}
           />
         </motion.div>
 
@@ -141,6 +145,7 @@ export const Projects = () => {
             description={`A Stardew Valley themed Where's Waldo type of game made with React and Firebase. The user must find three hidden characters in the shortest time possible. They can then submit their score and name to the leaderboard which is stored in the Firebase. I wanted to recreate the pixel art vibe of the game while keeping things plain and simple.`}
             website={'https://itsechi.github.io/wheres-waldo/'}
             img={images.wheresWaldo}
+            alt={'where is waldo game screenshot'}
           />
         </motion.div>
       </div>

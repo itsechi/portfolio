@@ -40,10 +40,11 @@ export const Project = (props) => {
           y: primaryY,
         }}
         className={styles.project_image}
-        src={props.img}
         variants={variants.imageVariants}
         animate={isInView ? 'visible' : 'hidden'}
         ref={ref}
+        src={props.img}
+        alt={props.alt}
       ></motion.img>
       <motion.div
         style={{
