@@ -61,4 +61,19 @@ export const variants = {
       transition: { duration: 0.5 },
     },
   },
+
+  headerVariants: {
+    hidden: {
+      top: '-100px',
+      backdropFilter: 'blur(0px)',
+      transition: { duration: 0.5 },
+      ease: [0.2, 0.65, 0.3, 0.9],
+    },
+    visible: {
+      top: '0px',
+      backdropFilter: 'blur(5px)',
+      transition: { duration: 0.5 },
+      ease: [0.2, 0.65, 0.3, 0.9],
+    },
+  },
 };
