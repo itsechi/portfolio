@@ -4,6 +4,10 @@
   align-items: center;
   padding: 1rem;
   height: 90px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
 }
 
 .header_logo {

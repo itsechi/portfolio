@@ -30,11 +30,6 @@ body {
   background-color: black;
 }
 
-::selection {
-  background-color: rgb(162, 176, 255);
-  color: #030202;
-}
-
 // fix later
 canvas {
   position: fixed;
@@ -68,6 +63,11 @@ canvas {
   background-repeat: repeat;
   opacity: 0.2;
   pointer-events: none;
+}
+
+::selection {
+  background-color: rgb(162, 176, 255);
+  color: #030202;
 }
 
 /* custom scrollbar */
