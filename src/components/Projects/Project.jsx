@@ -1,7 +1,7 @@
+import { Link } from '../Link/Link.jsx';
 import { useParallax } from '../../assets/js/useParallax';
 import { variants } from '../../assets/js/variants';
 import { motion, useInView } from 'framer-motion';
-import icons from '../../assets/icons.svg';
 import styles from './Projects.module.scss';
 import React from 'react';
 
@@ -47,6 +47,7 @@ export const Project = (props) => {
         src={props.img}
         alt={props.alt}
       ></motion.img>
+
       <motion.div
         style={{
           x: secondaryX,
@@ -57,25 +58,22 @@ export const Project = (props) => {
         <h3 className={styles.project_title}>{props.title}</h3>
         <ul className={styles.project_tags}>{projectTags}</ul>
       </motion.div>
+
       <motion.p
         variants={variants.textVariants}
         className={styles.project_description}
       >
         {props.description}
       </motion.p>
-      <motion.a
-        className={styles.project_website}
-        href={props.website}
-        target="_blank"
-        rel="noopener noreferrer"
-        variants={variants.textVariants}
-        aria-label={`Check out the ${props.title} site`}
-      >
-        <svg aria-hidden="true">
-          <use href={`${icons}#link`}></use>
-        </svg>
-        View project{' '}
-      </motion.a>
+
+      <motion.div variants={variants.textVariants}>
+        <Link
+          name={'View project'}
+          theme={'medium'}
+          href={props.website}
+          label={`Check out the ${props.title} website`}
+        ></Link>
+      </motion.div>
     </motion.article>
   );
 };

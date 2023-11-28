@@ -15,7 +15,7 @@ export const Header = () => {
   const scrollYRange = [0, 250];
   const widthSpring = useSpring(scrollY, variants.springPhysics);
   const width = useTransform(widthSpring, scrollYRange, ['0%', '100%']);
-  
+
   const controls = useAnimation();
   const delta = React.useRef(0);
   const lastScrollY = React.useRef(0);
@@ -40,9 +40,7 @@ export const Header = () => {
     const scrollTop = () => window.scrollTo({ top: props.scroll });
 
     return (
-      <li className={styles.nav_link} onClick={scrollTop}>
-        {props.title}
-      </li>
+      <li className={styles.nav_link} onClick={scrollTop}>{props.title}</li>
     );
   };
 
@@ -53,6 +51,7 @@ export const Header = () => {
       animate={controls}
       variants={variants.headerVariants}
     >
+      {/* make it scale instead */}
       <motion.div
         className={styles.header_borderLeft}
         style={{
@@ -66,6 +65,7 @@ export const Header = () => {
         }}
       ></motion.div>
       <p className={styles.header_logo}>Itsechi</p>
+
       <nav>
         <ul className={styles.nav_links}>
           <NavLink title={'home'} href={'#home'} scroll={0} />

@@ -4,8 +4,8 @@ export const Link = (props) => {
   const style =
     props.theme === 'large'
       ? styles.link_large
-      : props.theme === 'normal'
-      ? styles.link_normal
+      : props.theme === 'medium'
+      ? styles.link_medium
       : styles.link;
 
   return (

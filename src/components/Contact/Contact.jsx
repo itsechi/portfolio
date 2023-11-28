@@ -52,12 +52,8 @@ export const Contact = () => {
           href={'mailto:wardulinskao@gmail.com'}
         />
         <div className={styles.contact_websites}>
-          <Link name={'LinkedIn'} theme={'normal'} href={'#'} />
-          <Link
-            name={'Github'}
-            theme={'normal'}
-            href={'https://github.com/itsechi'}
-          />
+          <Link name={'LinkedIn'} href={'#'} />
+          <Link name={'Github'} href={'https://github.com/itsechi'} />
         </div>
       </motion.div>
     </motion.section>
