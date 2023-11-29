@@ -13,8 +13,8 @@ import { variants } from '../../assets/js/variants';
 export const Header = () => {
   const { scrollY } = useScroll();
   const scrollYRange = [0, 250];
-  const widthSpring = useSpring(scrollY, variants.springPhysics);
-  const width = useTransform(widthSpring, scrollYRange, ['0%', '100%']);
+  const scaleSpring = useSpring(scrollY, variants.springPhysics);
+  const scale = useTransform(scaleSpring, scrollYRange, [0, 1]);
 
   const controls = useAnimation();
   const delta = React.useRef(0);
@@ -27,11 +27,12 @@ export const Header = () => {
     } else {
       delta.current = delta.current <= -10 ? -10 : delta.current - diff;
     }
-
-    if (delta.current >= 10 && val > 150) {
+    if (val < 150) {
+      controls.start('top');
+    } else if (delta.current == 10 && val > 150) {
       controls.start('hidden');
-    } else if (delta.current <= -10 || val < 150) {
-      controls.start('visible');
+    } else if (delta.current == -10 || val < 150) {
+      controls.start('scrolled');
     }
     lastScrollY.current = val;
   });
@@ -40,7 +41,9 @@ export const Header = () => {
     const scrollTop = () => window.scrollTo({ top: props.scroll });
 
     return (
-      <li className={styles.nav_link} onClick={scrollTop}>{props.title}</li>
+      <li className={styles.nav_link} onClick={scrollTop}>
+        {props.title}
+      </li>
     );
   };
 
@@ -51,19 +54,13 @@ export const Header = () => {
       animate={controls}
       variants={variants.headerVariants}
     >
-      {/* make it scale instead */}
       <motion.div
-        className={styles.header_borderLeft}
+        className={styles.header_border}
         style={{
-          width: width,
+          scaleX: scale,
         }}
       ></motion.div>
-      <motion.div
-        className={styles.header_borderRight}
-        style={{
-          width: width,
-        }}
-      ></motion.div>
+
       <p className={styles.header_logo}>Itsechi</p>
 
       <nav>

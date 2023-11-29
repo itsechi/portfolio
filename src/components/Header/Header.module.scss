@@ -10,20 +10,11 @@
   width: 100%;
 }
 
-.header_borderLeft {
+.header_border {
   position: absolute;
   top: 100%;
-  left: 50%;
-  width: 50%;
-  height: 1px;
-  background-color: #ffffff28;
-}
-
-.header_borderRight {
-  position: absolute;
-  top: 100%;
-  right: 50%;
-  width: 50%;
+  left: 0%;
+  width: 100%;
   height: 1px;
   background-color: #ffffff28;
 }
