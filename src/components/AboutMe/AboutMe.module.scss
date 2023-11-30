@@ -21,6 +21,12 @@
     padding-top: 10rem;
     padding-bottom: 5rem;
   }
+
+  @media (max-width: $breakpoint-small) {
+    padding: 2rem;
+    padding-top: 10rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .aboutMe_header {

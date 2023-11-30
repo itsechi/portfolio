@@ -66,11 +66,11 @@ export const Header = () => {
       <nav>
         <ul className={styles.nav_links}>
           <NavLink title={'home'} href={'#home'} scroll={0} />
-          <NavLink title={'projects'} href={'#projects'} scroll={850} />
+          <NavLink title={'projects'} href={'#projects'} scroll={900} />
           <NavLink
             title={'about me & contact'}
             href={'#aboutme'}
-            scroll={2900}
+            scroll={7000}
           />
         </ul>
       </nav>

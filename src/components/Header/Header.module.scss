@@ -14,7 +14,7 @@
 
   @media (max-width: $breakpoint-small) {
     flex-direction: column;
-    height: 120px;
+    height: 100px;
   }
 }
 
@@ -37,6 +37,10 @@
   position: relative;
   pointer-events: all;
   cursor: pointer;
+
+  @media (max-width: $breakpoint-small) {
+    padding-bottom: 0.5rem;
+  }
 }
 
 .nav_links {

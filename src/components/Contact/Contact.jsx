@@ -15,7 +15,7 @@ export const Contact = () => {
   const isInView = useInView(ref, { once: true });
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['0', '1'],
+    offset: ['0', '0.8'],
   });
   const headerSpring = useSpring(scrollYProgress, variants.springPhysics);
   let transformValue = useTransform(headerSpring, [0, 0.8], ['-80px', '0px']);
