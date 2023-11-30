@@ -1143,14 +1143,14 @@ window.addEventListener('mousemove', function (e) {
 });
 
 canvas.addEventListener('touchstart', function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   let touches = e.targetTouches;
   while (touches.length >= pointers.length) {
     pointers.push(new pointerPrototype());
   }
   for (let i = 0; i < touches.length; i++) {
-    let posX = scaleByPixelRatio(touches[i].pageX);
-    let posY = scaleByPixelRatio(touches[i].pageY);
+    let posX = scaleByPixelRatio(touches[i].clientX);
+    let posY = scaleByPixelRatio(touches[i].clientY);
     updatePointerDownData(pointers[i + 1], touches[i].identifier, posX, posY);
   }
 });
@@ -1158,15 +1158,15 @@ canvas.addEventListener('touchstart', function (e) {
 canvas.addEventListener(
   'touchmove',
   function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     let touches = e.targetTouches;
     for (let i = 0; i < touches.length; i++) {
       let pointer = pointers[i + 1];
       if (!pointer.down) {
         continue;
       }
-      let posX = scaleByPixelRatio(touches[i].pageX);
-      let posY = scaleByPixelRatio(touches[i].pageY);
+      let posX = scaleByPixelRatio(touches[i].clientX);
+      let posY = scaleByPixelRatio(touches[i].clientY);
       updatePointerMoveData(pointer, posX, posY);
     }
   },

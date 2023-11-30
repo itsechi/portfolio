@@ -65,10 +65,10 @@ canvas {
   pointer-events: none;
 }
 
-::selection {
-  background-color: rgb(162, 176, 255);
-  color: #030202;
-}
+// ::selection {
+//   background-color: rgb(162, 176, 255);
+//   color: #030202;
+// }
 
 /* custom scrollbar */
 ::-webkit-scrollbar {

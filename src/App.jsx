@@ -17,7 +17,7 @@ export const App = () => {
   return (
     <>
       {!loaded && <div className="loading"></div>}
-      <div className="noise"></div> {/* testing */}
+      <div className="noise"></div>
       <Fluid />
       <Header />
       <SmoothScroll>
