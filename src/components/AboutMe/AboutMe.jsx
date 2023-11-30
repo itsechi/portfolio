@@ -17,7 +17,7 @@ export const AboutMe = () => {
     offset: ['-1', '0'],
   });
   const headerSpring = useSpring(scrollYProgress, variants.springPhysics);
-  let transformValue = useTransform(headerSpring, [0, 1], ['135px', '0px']);
+  let transformValue = useTransform(headerSpring, [0, 1], ['80px', '0px']);
 
   return (
     <motion.section

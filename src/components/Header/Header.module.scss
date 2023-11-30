@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -8,6 +10,12 @@
   top: 0;
   z-index: 3;
   width: 100%;
+  text-wrap: nowrap;
+
+  @media (max-width: $breakpoint-small) {
+    flex-direction: column;
+    height: 120px;
+  }
 }
 
 .header_border {
@@ -48,6 +56,11 @@
   margin: 0.5rem;
   cursor: pointer;
 
+  @media (max-width: $breakpoint-small) {
+    margin: 0.5rem;
+    margin-top: 0;
+  }
+
   &:after {
     content: "";
     bottom: -2px;
@@ -66,4 +79,3 @@
     left: 0%;
   }
 }
-

@@ -12,7 +12,7 @@ import { variants } from '../../assets/js/variants';
 
 export const Header = () => {
   const { scrollY } = useScroll();
-  const scrollYRange = [0, 250];
+  const scrollYRange = [0, 100];
   const scaleSpring = useSpring(scrollY, variants.springPhysics);
   const scale = useTransform(scaleSpring, scrollYRange, [0, 1]);
 
@@ -66,11 +66,11 @@ export const Header = () => {
       <nav>
         <ul className={styles.nav_links}>
           <NavLink title={'home'} href={'#home'} scroll={0} />
-          <NavLink title={'projects'} href={'#projects'} scroll={900} />
+          <NavLink title={'projects'} href={'#projects'} scroll={850} />
           <NavLink
             title={'about me & contact'}
             href={'#aboutme'}
-            scroll={4000}
+            scroll={2900}
           />
         </ul>
       </nav>

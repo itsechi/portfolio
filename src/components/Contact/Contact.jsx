@@ -15,22 +15,22 @@ export const Contact = () => {
   const isInView = useInView(ref, { once: true });
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['-1.5', '-1'],
+    offset: ['0', '1'],
   });
   const headerSpring = useSpring(scrollYProgress, variants.springPhysics);
-  let transformValue = useTransform(headerSpring, [0, 1], ['-80px', '0px']);
+  let transformValue = useTransform(headerSpring, [0, 0.8], ['-80px', '0px']);
 
   return (
     <motion.section
       className={styles.contact}
       variants={variants.containerVariants}
       animate={isInView ? 'visible' : 'hidden'}
-      ref={ref}
     >
       <div className={styles.contact_header}>
         <motion.h1
           variants={variants.textVariants}
           className={styles.contact_title}
+          ref={ref}
         >
           Contact me
         </motion.h1>

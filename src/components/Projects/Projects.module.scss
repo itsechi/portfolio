@@ -1,6 +1,23 @@
+@import '../../variables';
+
 .projects {
   padding: 10rem;
   padding-bottom: 0;
+
+  @media (max-width: $breakpoint-extraLarge) {
+    padding: 5rem;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    padding: 3rem;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    padding: 2rem;
+    padding-bottom: 0;
+  }
 }
 
 .projects_header {
@@ -11,18 +28,47 @@
   z-index: 1;
   position: relative;
   pointer-events: all;
+
+  @media (max-width: $breakpoint-small) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: $breakpoint-extraSmall) {
+    font-size: 2rem;
+  }
 }
 
 .projects_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
+
+  @media (max-width: $breakpoint-extraLarge) {
+    gap: 4.5rem;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    gap: 3rem;
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    gap: 5rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .project {
   z-index: 1;
   position: relative;
   pointer-events: all;
+
+  &:nth-of-type(5) {
+    grid-area: 3 / 2;
+
+    @media (max-width: $breakpoint-medium) {
+      grid-area: 5 / 1;
+    }
+  }
 }
 
 .project_uneven {
@@ -49,6 +95,7 @@
 .project_tags {
   display: flex;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .project_tag {
@@ -86,4 +133,8 @@
   letter-spacing: -1.6px;
   text-transform: capitalize;
   margin-bottom: 1rem;
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: 2rem;
+  }
 }
