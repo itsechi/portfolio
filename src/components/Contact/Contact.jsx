@@ -1,5 +1,5 @@
 import { Link } from '../Link/Link';
-import { variants } from '../../../public/assets/js/variants';
+import { variants } from '../../assets/js/variants';
 import styles from './Contact.module.scss';
 import {
   motion,

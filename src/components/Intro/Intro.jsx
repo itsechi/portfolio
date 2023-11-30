@@ -1,4 +1,4 @@
-import { variants } from '../../../public/assets/js/variants';
+import { variants } from '../../assets/js/variants';
 import { Link } from '../Link/Link';
 import styles from './Intro.module.scss';
 import React from 'react';

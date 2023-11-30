@@ -7,10 +7,10 @@ import {
   useInView,
 } from 'framer-motion';
 import styles from './Projects.module.scss';
-import { images } from '../../../public/assets/js/images';
+import { images } from '../../assets/js/images';
 import { Link } from '../Link/Link';
 import { Project } from './Project';
-import { variants } from '../../../public/assets/js/variants';
+import { variants } from '../../assets/js/variants';
 
 export const Projects = () => {
   const ref = React.useRef();
