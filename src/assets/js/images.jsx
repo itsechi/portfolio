@@ -1,8 +1,8 @@
-import weather from '../weather.png';
-import shoppingCart from '../shoppingcart.png';
-import twitter from '../twitter.png';
-import todoList from '../todoList.png';
-import wheresWaldo from '../wheresWaldo.png';
+import weather from '../weather.webp';
+import shoppingCart from '../shoppingcart.webp';
+import twitter from '../twitter.webp';
+import todoList from '../todoList.webp';
+import wheresWaldo from '../wheresWaldo.webp';
 
 export const images = {
   weather,

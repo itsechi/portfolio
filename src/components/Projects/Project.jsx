@@ -46,6 +46,8 @@ export const Project = (props) => {
         ref={ref}
         src={props.img}
         alt={props.alt}
+        width="800"
+        height="450"
       ></motion.img>
 
       <motion.div
