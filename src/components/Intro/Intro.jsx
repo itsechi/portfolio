@@ -63,11 +63,11 @@ export const Intro = (props) => {
         variants={variants.delayedVariants}
       >
         I&rsquo;m a passionate front-end web developer and graphic designer from
-        poland. you can check out my github{' '}
+        poland. you can check out my{' '}
         <Link
           href="https://github.com/itsechi?tab=repositories"
-          name={'here'}
-          label={'View my github profile'}
+          name={'github'}
+          label={'Click here to view my github profile'}
         />{' '}
         or scroll down to see my projects.
       </motion.p>
