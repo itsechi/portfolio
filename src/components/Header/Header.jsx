@@ -8,7 +8,7 @@ import {
   useSpring,
 } from 'framer-motion';
 import React from 'react';
-import { variants } from '../../assets/js/variants';
+import { variants } from '../../../public/assets/js/variants';
 
 export const Header = () => {
   const { scrollY } = useScroll();

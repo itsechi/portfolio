@@ -1,4 +1,4 @@
-import { variants } from '../../assets/js/variants';
+import { variants } from '../../../public/assets/js/variants';
 import styles from './AboutMe.module.scss';
 import {
   motion,

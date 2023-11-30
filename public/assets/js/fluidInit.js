@@ -23,7 +23,6 @@ SOFTWARE.
 */
 
 'use strict';
-import textureImg from '../LDR_LLL1_0.png';
 
 let canvas = document.getElementsByClassName('fluid-canvas')[0];
 resizeCanvas();
@@ -414,7 +413,7 @@ let bloomFramebuffers = [];
 let sunrays;
 let sunraysTemp;
 
-let ditheringTexture = createTextureAsync(textureImg);
+let ditheringTexture = createTextureAsync('./assets/LDR_LLL1_0.png');
 
 let blurProgram = new Program(blurVertexShader, blurShader);
 let copyProgram = new Program(baseVertexShader, copyShader);
