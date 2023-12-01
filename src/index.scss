@@ -37,18 +37,8 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index:-1;
   // background-image: url('./assets/bg.png');
-}
-
-.loading {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  z-index: 1000;
 }
 
 .noise {
@@ -65,10 +55,10 @@ canvas {
   pointer-events: none;
 }
 
-// ::selection {
-//   background-color: rgb(162, 176, 255);
-//   color: #030202;
-// }
+::selection {
+  background-color: #A997DF;
+  color: #030202;
+}
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
