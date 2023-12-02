@@ -1,8 +1,8 @@
+import React from 'react';
+import SmoothScroll from './assets/js/SmoothScroll';
 import { Header } from './components/Header/Header';
 import { Main } from './components/Main/Main';
 import { Fluid } from './components/Fluid/Fluid';
-import SmoothScroll from './assets/js/SmoothScroll';
-import React from 'react';
 import { Loader } from './components/Loader/Loader';
 
 export const App = () => {

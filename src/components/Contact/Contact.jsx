@@ -1,6 +1,3 @@
-import { Link } from '../Link/Link';
-import { variants } from '../../assets/js/variants';
-import styles from './Contact.module.scss';
 import {
   motion,
   useInView,
@@ -9,6 +6,9 @@ import {
   useTransform,
 } from 'framer-motion';
 import React from 'react';
+import styles from './Contact.module.scss';
+import { Link } from '../Link/Link';
+import { variants } from '../../assets/js/variants';
 
 export const Contact = () => {
   const ref = React.useRef();

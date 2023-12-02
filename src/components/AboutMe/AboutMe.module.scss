@@ -30,13 +30,10 @@
 }
 
 .aboutMe_header {
-  z-index: 1;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-transform: uppercase;
-  pointer-events: all;
 
   @media (max-width: $breakpoint-small) {
     font-size: 0.8rem;
@@ -73,19 +70,4 @@
 .aboutMe_text {
   margin-top: 3rem;
   max-width: 600px;
-  z-index: 1;
-  position: relative;
-  pointer-events: all;
-
-  // @media (max-width: $breakpoint-extraLarge) {
-  //   max-width: 800px;
-  // }
-
-  // @media (max-width: $breakpoint-large) {
-  //   max-width: 600px;
-  // }
-
-  // @media (max-width: $breakpoint-medium) {
-  //   max-width: 600px;
-  // }
 }

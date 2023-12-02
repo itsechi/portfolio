@@ -30,7 +30,6 @@ body {
   background-color: black;
 }
 
-// fix later
 canvas {
   position: fixed;
   top: 0;
@@ -38,7 +37,6 @@ canvas {
   width: 100%;
   height: 100%;
   z-index:-1;
-  // background-image: url('./assets/bg.png');
 }
 
 .noise {
@@ -53,6 +51,15 @@ canvas {
   background-repeat: repeat;
   opacity: 0.2;
   pointer-events: none;
+}
+
+.scroll_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  will-change: transform;
 }
 
 ::selection {
@@ -86,13 +93,3 @@ canvas {
   background: rgba(0, 0, 0, 0);
 }
 
-.scroll_container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  will-change: transform;
-  z-index: 2;
-  pointer-events: none;
-}

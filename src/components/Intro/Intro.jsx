@@ -1,6 +1,3 @@
-import { variants } from '../../assets/js/variants';
-import { Link } from '../Link/Link';
-import styles from './Intro.module.scss';
 import React from 'react';
 import {
   motion,
@@ -9,6 +6,9 @@ import {
   useSpring,
   useAnimation,
 } from 'framer-motion';
+import styles from './Intro.module.scss';
+import { variants } from '../../assets/js/variants';
+import { Link } from '../Link/Link';
 
 export const Intro = (props) => {
   const scrollRef = React.useRef();

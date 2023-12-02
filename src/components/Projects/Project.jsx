@@ -1,9 +1,9 @@
-import styles from './Projects.module.scss';
 import React from 'react';
-import { Link } from '../Link/Link.jsx';
-import { useParallax } from '../../assets/js/useParallax.js';
-import { variants } from '../../assets/js/variants.jsx';
 import { motion, useInView } from 'framer-motion';
+import styles from './Projects.module.scss';
+import { useParallax } from '../../assets/js/useParallax.js';
+import { Link } from '../Link/Link.jsx';
+import { variants } from '../../assets/js/variants.jsx';
 
 export const Project = (props) => {
   const {

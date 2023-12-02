@@ -1,5 +1,4 @@
-import { variants } from '../../assets/js/variants';
-import styles from './AboutMe.module.scss';
+import React from 'react';
 import {
   motion,
   useInView,
@@ -7,7 +6,8 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion';
-import React from 'react';
+import styles from './AboutMe.module.scss';
+import { variants } from '../../assets/js/variants';
 
 export const AboutMe = () => {
   const ref = React.useRef();

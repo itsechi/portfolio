@@ -33,9 +33,6 @@
   font-weight: 700;
   padding: 1rem;
   transform: translateY(-2%);
-  z-index: 1;
-  position: relative;
-  pointer-events: all;
   cursor: pointer;
 
   @media (max-width: $breakpoint-small) {
@@ -48,9 +45,6 @@
   flex-direction: row;
   justify-content: flex-end;
   text-transform: uppercase;
-  z-index: 1;
-  position: relative;
-  pointer-events: all;
 }
 
 .nav_link {

@@ -14,9 +14,6 @@
   flex-direction: column;
   text-transform: uppercase;
   text-align: right;
-  pointer-events: all;
-  z-index: 1;
-  position: relative;
   padding: 2rem;
   text-wrap: nowrap;
 
@@ -66,8 +63,5 @@
   max-width: 700px;
   text-align: center;
   text-transform: uppercase;
-  pointer-events: all;
-  position: relative;
-  z-index: 1;
   padding: 2rem;
 }

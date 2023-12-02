@@ -24,9 +24,6 @@
   flex-direction: column;
   align-items: flex-end;
   text-transform: uppercase;
-  z-index: 1;
-  position: relative;
-  pointer-events: all;
 
   @media (max-width: $breakpoint-small) {
     font-size: 0.8rem;
@@ -63,9 +60,6 @@
 .contact_text {
   margin-top: 3rem;
   text-align: right;
-  z-index: 1;
-  position: relative;
-  pointer-events: all;
 }
 
 .contact_websites {

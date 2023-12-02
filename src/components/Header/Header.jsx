@@ -1,4 +1,3 @@
-import styles from './Header.module.scss';
 import {
   useScroll,
   useMotionValueEvent,
@@ -8,6 +7,7 @@ import {
   useSpring,
 } from 'framer-motion';
 import React from 'react';
+import styles from './Header.module.scss';
 import { variants } from '../../assets/js/variants';
 
 export const Header = () => {

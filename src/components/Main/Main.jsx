@@ -1,8 +1,8 @@
+import styles from './Main.module.scss';
 import { AboutMe } from '../AboutMe/AboutMe';
 import { Contact } from '../Contact/Contact';
 import { Intro } from '../Intro/Intro';
 import { Projects } from '../Projects/Projects';
-import styles from './Main.module.scss';
 
 export const Main = (props) => {
   return (
