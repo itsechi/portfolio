@@ -61,7 +61,7 @@ export const Header = () => {
         }}
       ></motion.div>
 
-      <p className={styles.header_logo}>Itsechi</p>
+      <p className={styles.header_logo} onClick={() => location.reload()}>Itsechi</p>
 
       <nav>
         <ul className={styles.nav_links}>
