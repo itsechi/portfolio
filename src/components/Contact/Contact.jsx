@@ -52,7 +52,7 @@ export const Contact = () => {
           href={'mailto:wardulinskao@gmail.com'}
         />
         <div className={styles.contact_websites}>
-          <Link name={'LinkedIn'} href={'#'} />
+          <Link name={'LinkedIn'} href={'https://linkedin.com/in/oliwia-wardulinska-8a83222a3'} />
           <Link name={'Github'} href={'https://github.com/itsechi'} />
         </div>
       </motion.div>
