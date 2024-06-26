@@ -67,12 +67,20 @@ export const Projects = () => {
             windowSize[0] >= 680 ? styles.project_uneven : '',
           ].join(' ')}
           translateValue={windowSize[0] >= 680 ? translateValue : 0}
-          tags={['React', 'Firebase', 'SCSS', 'Jest', 'CSS modules']}
-          title={'Shopping Cart'}
-          description={`A simple fake store React application made to practice routing, Jest testing and using CSS modules. It allows users to log in through Google, browse the store catalog, add items to cart and store that information in the Firebase database. I wanted the design to be simple yet effective.`}
-          website={'https://itsechi.github.io/shopping-cart/'}
-          img={images.shoppingCart}
-          alt={'shopping site front page'}
+          tags={[
+            'TypeScript',
+            'React',
+            'MongoDB',
+            'Node.js',
+            'Express',
+            'Tailwind CSS',
+            'Vite',
+          ]}
+          title={'Todo List'}
+          description={`A simple task organizer made with TypeScript and the MERN stack. The user can add, edit and delete lists and tasks, log in with Google or use local storage to save tasks and monitor progress with a progress bar for each list.`}
+          website={'https://itsechi.github.io/typescript-todo/'}
+          img={images.todoList}
+          alt={'todo list app'}
         />
 
         <Project
@@ -91,12 +99,12 @@ export const Projects = () => {
             windowSize[0] >= 680 ? styles.project_uneven : '',
           ].join(' ')}
           translateValue={windowSize[0] >= 680 ? translateValue : 0}
-          tags={['JavaScript', 'Webpack', 'SCSS']}
-          title={'Todo List'}
-          description={`A simple task organizer made with pure JavaScript. The user can add projects, add and edit tasks, sort the tasks by due date, name and date of creation, delete taks and projects, set priority of the tasks and monitor their progress with a progress bar for each project.`}
-          website={'https://itsechi.github.io/todo-list/'}
-          img={images.todoList}
-          alt={'adding tasks at a todo list app'}
+          tags={['React', 'Firebase', 'SCSS', 'Jest', 'CSS modules']}
+          title={'Shopping Cart'}
+          description={`A simple fake store React application made to practice routing, Jest testing and using CSS modules. It allows users to log in through Google, browse the store catalog, add items to cart and store that information in the Firebase database. I wanted the design to be simple yet effective.`}
+          website={'https://itsechi.github.io/shopping-cart/'}
+          img={images.shoppingCart}
+          alt={'shopping site front page'}
         />
 
         <Project
